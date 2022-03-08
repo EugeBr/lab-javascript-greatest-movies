@@ -82,8 +82,12 @@ function orderAlphabetically(mArray) {
       titlesByName.push(movie.title);
     });
    
-    return titlesByName;
-  
+    let firstTwenty = titlesByName.slice(0, 20); 
+    if(titlesByName.length < 20){
+      return titlesByName;
+    }else{
+      return firstTwenty;
+    };                
   };
 
 // BONUS - Iteration 7: Time Format - Turn duration of the movies from hours to minutes
